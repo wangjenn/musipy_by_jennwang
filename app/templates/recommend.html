@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% block body %}
+  <section class="header">
+    <h2 class="title">Music Recommendation</h2>
+  </section>
+  <hr />
+
+  <div class="content">
+      <div class="row">
+        <button onclick="window.history.back()" class="button-default">Back to Home</button>
+      </div>
+    <table>
+        <thead>
+        <tr>
+          <th>Title</th>
+          <th>Artist</th>
+          <th>Genre</th>
+        </tr>
+        </thead>
+        <tbody>
+      {% for title, artist, genre in newone %}
+        <tr>
+          <td>{{title}}</td>
+          <td>{{artist}}</td>
+          <td>{{genre}}</td>
+          <td>
+            <audio controls>
+              <source src="/static/mp3/{{title}}.mp3" type="audio/mpeg">
+            </audio>
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+    </table>
+  </div>
+{% endblock body %}
+
+{% block js %}
+  <script type="text/javascript">
+    var scores = '';
+    scores += (document.getElementById("openness").value)+ ";";
+    scores += (document.getElementById("conscientiousness").value)+ ";";
+    scores += (document.getElementById("extraversion").value)+ ";";
+    scores += (document.getElementById("agreeableness").value)+ ";";
+    scores += (document.getElementById("neuroticism").value)+ ";";
+    console.log(scores);
+
+    d3.selectAll(".thumbs")
+      .on("click", function() {
+        var color = d3.select(this)
+          .style("color");
+        if (color == "rgb(255, 0, 0)") {
+          d3.select(this)
+            .style("color", null);   
+        } else {
+          d3.select(this)
+            .style("color", "red");}
+      })
+
+    d3.select("button.recommend")
+      .on("click", function() {
+        var selected_songs = "";
+        var all_songs = "";
+        d3.selectAll(".thumbs")
+          .each(function() {
+            var color = d3.select(this).style("color");
+            var songTitle = d3.select(this).attr("data-title");
+            if (color == "rgb(255, 0, 0)"){
+              selected_songs += songTitle + ";";
+            }
+            all_songs += songTitle + ";";
+          });
+        console.log(selected_songs);
+        if (selected_songs) { //args 
+          console.log("/recommend/?all_songs=" + all_songs + "&selected_songs=" + selected_songs + "&scores=" + scores);
+          window.location = "/recommend/?all_songs=" + all_songs + "&selected_songs=" + selected_songs + "&scores=" + scores;
+          // window.location = "recommend/";
+          // $.get("/recommend/")
+        };
+      })
+  </script>
+{%endblock js%}

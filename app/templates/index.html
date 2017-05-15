@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+
+{% block body %}
+  <section class="header">
+    <h2 class="title">MusiPy</h2>
+  </section>
+  <hr />
+  <h4>
+      Click <a href="http://www.psytoolkit.org/cgi-bin/psy2.1.0/survey?s=hgHBk" target="_blank"> here to take the Big Five personality test</a> 
+    </h4>
+
+  <div class="content">
+    <h4>
+        Please input your Big Five personality scores!  
+    </h4>
+    <form method="POST">
+      {{ form.hidden_tag() }}
+      <div class="row">
+        <div class="three columns">
+          {{ form.openness.label }} {{ form.openness() }}
+        </div>
+        <div class="three columns">
+          {{ form.conscientiousness.label }} {{ form.conscientiousness() }}
+        </div>
+        <div class="three columns">
+          {{ form.extraversion.label }} {{ form.extraversion() }}
+        </div>
+        <div class="three columns">
+          {{ form.agreeableness.label }} {{ form.agreeableness() }}
+        </div>
+        <div class="three columns">
+          {{ form.neuroticism.label }} {{ form.neuroticism() }}
+        </div>
+      </div>
+      <div class="row">
+        <button type="submit" class="button-primary">Submit</button>
+      </div>
+    </form>
+      <table>
+        {% for title, artist, genre in song_returns %}
+        <tr>
+          <td>{{title}}</td>
+          <td>{{artist}}</td>
+          <td>{{genre}}</td>
+          <td>          <td>
+            <audio controls>
+              <source src="/static/mp3/{{title}}.mp3" type="audio/mpeg">
+            </audio>
+          </td>
+          <td><i data-title="{{title}}"
+            class="thumbs fa fa-thumbs-up fa-2x" aria-hidden="true"></i></td>
+        </tr>
+        {% endfor %}
+      </table>
+    <div class="row">
+      <button type="submit" class="recommend button-primary">Recommend Songs</button>
+    </div>
+    {% if newone %}
+    {% for rec in newone %}
+    <table>
+        {% for score in newone %}
+        <tr>
+          <td>{{score}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% endfor %}
+    {% endif %}
+  </div>
+{% endblock body %}
+
+{% block js %}
+  <script type="text/javascript">
+    var scores = '';
+    scores += (document.getElementById("openness").value)+ ";";
+    scores += (document.getElementById("conscientiousness").value)+ ";";
+    scores += (document.getElementById("extraversion").value)+ ";";
+    scores += (document.getElementById("agreeableness").value)+ ";";
+    scores += (document.getElementById("neuroticism").value)+ ";";
+    console.log(scores);
+
+    d3.selectAll(".thumbs")
+      .on("click", function() {
+        var color = d3.select(this)
+          .style("color");
+        if (color == "rgb(255, 0, 0)") {
+          d3.select(this)
+            .style("color", null);   
+        } else {
+          d3.select(this)
+            .style("color", "red");}
+      })
+
+    d3.select("button.recommend")
+      .on("click", function() {
+        var selected_songs = "";
+        var all_songs = "";
+        d3.selectAll(".thumbs")
+          .each(function() {
+            var color = d3.select(this).style("color");
+            var songTitle = d3.select(this).attr("data-title");
+            if (color == "rgb(255, 0, 0)"){
+              selected_songs += songTitle + ";";
+            }
+            all_songs += songTitle + ";";
+          });
+        console.log(selected_songs);
+        if (selected_songs) { //args 
+          console.log("/recommend/?all_songs=" + all_songs + "&selected_songs=" + selected_songs + "&scores=" + scores);
+          window.location = "/recommend/?all_songs=" + all_songs + "&selected_songs=" + selected_songs + "&scores=" + scores;
+          // window.location = "recommend/";
+          // $.get("/recommend/")
+        };
+      })
+  </script>
+{% endblock js %}
