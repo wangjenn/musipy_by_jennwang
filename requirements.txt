@@ -1,4 +1,4 @@
-Flask==0.10.1
+Flask==1.0
 flask_wtf==0.12
 numpy==1.11.1
 scipy==0.18.0
