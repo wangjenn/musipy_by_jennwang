@@ -17,4 +17,4 @@ https://user-images.githubusercontent.com/12160492/151130465-aed83eab-b681-48ec-
 
 
 
-*Feel free to contact me (linkedin.com/jennifermwangphd) if you have any questions! ❤*
+Feel free to contact me (linkedin.com/jennifermwangphd) if you have any questions! 👍🏻
