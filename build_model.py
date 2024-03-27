@@ -13,7 +13,7 @@ if __name__ == "__main__":
     target = iris_data.target
     target_names = iris_data.target_names
 
-    knn = KNeighborsClassifier(n_neighbors=3)  # replace with your own ML model here
+    knn = KNeighborsClassifier(n_neighbors=3) 
     knn.fit(features, target)
 
     _CUR_DIR = os.path.dirname(os.path.realpath(__file__))
