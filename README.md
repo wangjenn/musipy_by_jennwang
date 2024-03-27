@@ -1,4 +1,4 @@
-# MusiPy By Jenn Wang
+# 🎧 MusiPy By Jenn Wang
 **Description**: 🎧 **Personality-based Music Recommendation System** (based on REAL psychometrically validated personality measures, not some fluffy woo-woo astrological Buzzfeed quiz stuff! 🔮🤓) 
 
 - **UPDATE**: This project was built a **LONG, LONG time** ago in a matter of 2-3 weeks as a beginner project for me. So, there are no doubt tons of errors and outdated stuff throughout! 
