@@ -53,4 +53,4 @@ https://github.com/wangjenn/musipy_by_jennwang/files/7940068/Public_Copy_Wang_Je
 
 
 ----------------------------------------------------------------------------------------------------------------
-Feel free to contact me (linkedin.com/jennifermwangphd) if you have any questions! 👍🏻
+💕 Feel free to contact me (linkedin.com/jennifermwangphd) if you have any questions! 👍🏻. I genuinely LOVE talking to and learning from people (nerds especially welcome 🤓), but please try to remain civil and professional if possible. I welcome constructive feedback, but I don't usually find harsh criticisms or attacks on my logic and decisions very useful (yes, this has happened before, though to this day I'm not sure why). Again, I did this project a VERY, VERY LONG time ago, and I currently don't have the time nor the desire to revisit this project in depth to optimize and perfect my code to perfection. Thank you for understanding! 🙏🏻. 
