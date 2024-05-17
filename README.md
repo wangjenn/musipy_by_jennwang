@@ -32,7 +32,8 @@
   The quick answer is that I used cosine similarity for the **personality scores** (the "content-based filtering" portion). Specifically, I used the DISTANCE between the personality scores to calculate this. I also used cosine similarity for determining song rating similarity (the "collaborative-filtering" portion, if you will).
 
 
-**SUMMARY**: the inspiration behind this project was simply a way for me to see if I could creatively combine my training and background in statistics and psychology with my love of all things data and technology. While I'm sure the execution of this vision is surely primitive and crude (this was my very first web app project, after all!), I just wanted to share my work here in hopes of showing others that, even without traditional background in software engineering training, we can still create something cool and creative 💕. Learning something new is seriously so FUN! 🤓
+### **SUMMARY**: 
+- The inspiration behind this project was simply a way for me to see if I could creatively combine my training and background in statistics and psychology with my love of all things data and technology. While I'm sure the execution of this vision is surely primitive and crude (this was my very first web app project, after all!), I just wanted to share my work here in hopes of showing others that, even without traditional background in software engineering training, we can still create something cool and creative 💕. Learning something new is seriously so FUN! 🤓
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## **Presentation**: 
