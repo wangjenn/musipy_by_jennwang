@@ -12,7 +12,7 @@
 ----------------------------------------------------------------------------------------------------------------
 ## **SOME UPDATES AND CAVEATS**
 
-- This project was built a **LONG, LONG, LONG time** ago in a matter of 2-3 weeks as a beginner project for me. So, YES, I am well aware of the many errors and outdated techniques inherent in this project. Nevertheless, I wanted to share this project here in hopes of inspiring others to think about how they might try to start their very own machine learning projects even if they may not have the traditional software engineering background or training (yet) 🤓.
+- This project was built a **LONG, LONG, LONG time** ago (circa ~2017) in a matter of 2-3 weeks as a beginner project for me. So, YES, I am well aware of the many errors and outdated techniques inherent in this project. Nevertheless, I wanted to share this project here in hopes of inspiring others to think about how they might try to start their very own machine learning projects even if they may not have the traditional software engineering background or training (yet) 🤓.
 
 ----------------------------------------------------------------------------------------
 # **Some Common FAQs** ❓
@@ -32,10 +32,7 @@
   The quick answer is that I used cosine similarity for the **personality scores** (the "content-based filtering" portion). Specifically, I used the DISTANCE between the personality scores to calculate this. I also used cosine similarity for determining song rating similarity (the "collaborative-filtering" portion, if you will).
 
 
-### - *I think you did XYZ wrong/ I think your code is inelegant, clumsy, inefficient, and ugly/ I think you did this whole recommendation system thing wrong/ I think it's absolutely clear and obvious that you have NO IDEA what you're talking about or what you're doing!/ You are NOT a real Data Scientist/Machine Learning Engineer!*
-
-
-  I appreciate your unsolicited feedback as well as the time you've taken to inform me of your thoughts. First, I NEVER claim to be a Machine Learning Engineer or a world-class expert on Artificial Intelligence or state-of-the-art recommendation systems. My background and training is in **Quantitative Psychology** and **Statistics**, and, again, the inspiration behind this project was simply a way for me to see if I could creatively combine my interest in User Behavior with my love of all things data and technology. While I'm sure the execution of this vision is surely primitive and crude (this is my very first project, after all), I just wanted to share my work here in hopes of showing others that, even without elite software engineering training, that we can still create something cool and creative 💕. Learning something new is seriously so FUN! 🤓
+**SUMMARY**: the inspiration behind this project was simply a way for me to see if I could creatively combine my training and background in statistics and psychology with my love of all things data and technology. While I'm sure the execution of this vision is surely primitive and crude (this was my very first web app project, after all!), I just wanted to share my work here in hopes of showing others that, even without traditional background in software engineering training, we can still create something cool and creative 💕. Learning something new is seriously so FUN! 🤓
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## **Presentation**: 
