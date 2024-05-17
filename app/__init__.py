@@ -1,19 +1,9 @@
-from flask import Flask
-from sklearn.externals import joblib
-import pandas as pd
+from flask import render_template
+from .initialize import app, estimator, song_names, song_cosines
+from .views import main as main_blueprint
 
-
-app = Flask(__name__)
-app.config.from_object("app.config")
-
-# unpickle my model
-estimator = joblib.load('models/music.pkl')
-song_names = pd.read_csv('data/songs_names.csv', encoding='utf-8')
-song_cosines = pd.read_csv('data/song_cosines.csv')
-target_names = ['setosa', 'versicolor', 'virginica']
-
-from .views import *
-
+# Register the blueprint
+app.register_blueprint(main_blueprint)
 
 # Handle Bad Requests
 @app.errorhandler(404)
