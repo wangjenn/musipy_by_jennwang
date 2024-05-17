@@ -52,4 +52,6 @@
 
 
 ----------------------------------------------------------------------------------------------------------------
-💕 Feel free to contact me (linkedin.com/jennifermwangphd) if you have any questions! 👍🏻. I genuinely LOVE talking to and learning from people (nerds especially welcome 🤓), but please try to remain civil and professional if possible. I welcome constructive feedback, but I don't usually find harsh criticisms or attacks on my logic and decisions very useful (yes, this has happened before, though to this day I'm not sure why). Again, I did this project a VERY, VERY LONG time ago, and I currently don't have the time nor the desire to revisit this project in depth to optimize and perfect my code to perfection. Thank you for understanding! 🙏🏻. 
+💕 Feel free to contact me (linkedin.com/jennifermwangphd) if you have any questions! 👍🏻. I genuinely LOVE talking to and learning from people (nerds especially welcome 🤓), but please try to remain civil and professional if possible. I welcome constructive feedback, but I don't usually find harsh criticisms or attacks on my logic or the technical exeuction or the beauty of my code very useful (yes, this has happened before!). Again, I did this project a VERY, VERY LONG time ago, and while I try to update packages and dependencies sporadically, I currently don't have the time nor desire to revisit this project in depth /optimize code to perfection. 
+
+Thank you for understanding! 🙏🏻. 
