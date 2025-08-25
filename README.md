@@ -2,15 +2,21 @@
 **Description**: 
 
 
-# Personality-based Music Recommendation System: 
+## Personality-based Music Recommendation System: 
 - This music recommendation system is based on REAL psychometrically validated personality measures, not some fluffy woo-woo astrological Buzzfeed quiz stuff! 🔮🤓
 
-- This simple project was inspired by empirical research demonstrating the links between personality dimensions and music preferences. I created this app based on _collaborative filtering_ + _content-based filtering_ using **kNN** and **cosine similarities**. Specifically, this app recommends different types of music to users based on their: 
-  1) Unique personality dimensions (as validated by the psychometrically valid **Big Five Inventory**) and
-  2) Real-time in-app user interactions and behaviors (e.g., 👍🏻 or 👎🏻 to a sample song snippet).
+- This simple project was inspired by empirical research demonstrating the links between personality dimensions and music preferences. I created this app based on _collaborative filtering_ + _content-based filtering_ using **kNN** and **cosine similarities**. Specifically, this app recommends different types of music to users based on their:
+  - Unique personality dimensions (as validated by the psychometrically valid **Big Five Inventory**) and
+  - Real-time in-app user interactions and behaviors (e.g., 👍🏻 or 👎🏻 to a sample song snippet).
+
+---
+## Quick Demo: 
+![MusiPy Demo Screenshot](images/demo.png)
+- https://user-images.githubusercontent.com/12160492/151130465-aed83eab-b681-48ec-b3c3-fd01b838dc8c.mp4
+
 
 ----------------------------------------------------------------------------------------
-# **Common FAQs** ❓
+## **Common FAQs** ❓
 ### *Why did you use kNN?*
 
   Because it is the most commonly used algorithm (the standard algorithm, if you will) for recommendation systems (as of 7 years ago when I first started this project). Also, I didn't have a lot of features in this particular dataset, so I was hoping that the potential problems of overfitting for kNN would be minimal. 
@@ -29,12 +35,6 @@
 ## **Presentation**: 
 
 - https://github.com/wangjenn/musipy_by_jennwang/files/7940068/Public_Copy_Wang_Jennifer_MusiPy.pdf
-
-
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-## Quick Demo: 
-- https://user-images.githubusercontent.com/12160492/151130465-aed83eab-b681-48ec-b3c3-fd01b838dc8c.mp4
-
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## Resources: 
