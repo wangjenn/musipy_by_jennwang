@@ -5,13 +5,13 @@
 # Personality-based Music Recommendation System: 
 - This music recommendation system is based on REAL psychometrically validated personality measures, not some fluffy woo-woo astrological Buzzfeed quiz stuff! 🔮🤓
 
-- This simple project was inspired by empirical research demonstrating the links between personality dimensions and music preferences, I created this app based on _collaborative filtering_ + _content-based filtering_ using **kNN** and **cosine similarities**. Specifically, this app recommends different types of music to users based on their: 
+- This simple project was inspired by empirical research demonstrating the links between personality dimensions and music preferences. I created this app based on _collaborative filtering_ + _content-based filtering_ using **kNN** and **cosine similarities**. Specifically, this app recommends different types of music to users based on their: 
   1) Unique personality dimensions (as validated by the psychometrically valid **Big Five Inventory**) and
   2) Real-time in-app user interactions and behaviors (e.g., 👍🏻 or 👎🏻 to a sample song snippet).
 
 ----------------------------------------------------------------------------------------
 # **Common FAQs** ❓
-### - *Why did you use kNN?*
+### *Why did you use kNN?*
 
   Because it is the most commonly used algorithm (the standard algorithm, if you will) for recommendation systems (as of 7 years ago when I first started this project). Also, I didn't have a lot of features in this particular dataset, so I was hoping that the potential problems of overfitting for kNN would be minimal. 
 
@@ -22,13 +22,9 @@
   
   I chose *cosine similarity* because it is the most commonly used distance metric, and also because the nature of my data are not "real" metric values (e.g., length, height, weight), so my thinking at the time was that distance metrics like the Euclidean metrics wouldn't be as appropriate for my particular goals. 
 
-### - *How exactly did you use cosine similarity in your project?*
+### *How exactly did you use cosine similarity in your project?*
 
   The quick answer is that I used cosine similarity for the **personality scores** (the "content-based filtering" portion). Specifically, I used the DISTANCE between the personality scores to calculate this. I also used cosine similarity for determining song rating similarity (the "collaborative-filtering" portion, if you will).
-
-
-### **SUMMARY**: 
-- The inspiration behind this project was simply a way for me to see if I could creatively combine my training and background in statistics and psychology with my love of all things data and technology. While I'm sure the execution of this vision is surely primitive and crude (this was my very first web app project, after all!), I just wanted to share my work here in hopes of showing others that, even without traditional background in software engineering training, we can still create something cool and creative 💕. Learning something new is seriously so FUN! 🤓
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## **Presentation**: 
