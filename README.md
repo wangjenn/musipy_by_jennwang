@@ -15,7 +15,7 @@
 
 ---
 ## 🎤 Presentation: 
-[View Presentation (PDF)](https://github.com/wangjenn/musipy_by_jennwang/files/7940068/Public_Copy_Wang_Jennifer_MusiPy.pdf)
+- [View Presentation (PDF)](https://github.com/wangjenn/musipy_by_jennwang/files/7940068/Public_Copy_Wang_Jennifer_MusiPy.pdf)
 <a href="https://github.com/wangjenn/musipy_by_jennwang/files/7940068/Public_Copy_Wang_Jennifer_MusiPy.pdf" target="_blank">
   <img src="images/presentation.png" alt="Presentation Screenshot" />
 </a>
