@@ -142,7 +142,7 @@ def show_personality_test():
     st.markdown("""
     Take the Big Five personality test to get personalized music recommendations!
     
-    **Take the test here:** [Big Five Personality Test](https://www.psytoolkit.org/c/3.4.4/survey?s=hgHBk)
+    **Take the test here:** [Big Five Personality Test](https://www.psytoolkit.org/c/3.6.0/survey?s=hgHBk)
     """)
     st.markdown('</div>', unsafe_allow_html=True)
     
