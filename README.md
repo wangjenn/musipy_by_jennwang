@@ -20,6 +20,7 @@
   <img src="images/presentation.png" alt="Presentation Screenshot" />
 </a>
 ---
+
 ## ❓Common FAQs:
 - **Why did you use kNN?**
   - Because it is the most commonly used algorithm (the standard algorithm, if you will) for recommendation systems (as of 7 years ago when I first started this project). Also, I didn't have a lot of features in this particular dataset, so I was hoping that the potential problems of overfitting for kNN would be minimal. 
