@@ -325,12 +325,23 @@ def load_data():
         
         # Load model
         model_path = os.path.join(BASE_DIR, 'models', 'knn.pkl')
+        if not os.path.exists(model_path):
+            st.error(f"Model file not found: {model_path}")
+            return None, None, None, None
         estimator = joblib.load(model_path)
         
         # Load data files
         song_names_path = os.path.join(BASE_DIR, 'data', 'songs_names.csv')
         song_cosines_path = os.path.join(BASE_DIR, 'data', 'song_cosines.csv')
         final_data_path = os.path.join(BASE_DIR, 'data', 'final.csv')
+        
+        # Check if files exist
+        for path, name in [(song_names_path, 'songs_names.csv'), 
+                          (song_cosines_path, 'song_cosines.csv'), 
+                          (final_data_path, 'final.csv')]:
+            if not os.path.exists(path):
+                st.error(f"Data file not found: {name}")
+                return None, None, None, None
         
         song_names = pd.read_csv(song_names_path, encoding='utf-8')
         song_cosines = pd.read_csv(song_cosines_path)
