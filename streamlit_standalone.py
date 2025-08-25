@@ -1,3 +1,10 @@
+#!/usr/bin/env python3
+"""
+STANDALONE STREAMLIT APP - NO FLASK DEPENDENCIES
+This file is completely independent of the Flask app structure.
+Use this file for Streamlit Cloud deployment.
+"""
+
 import streamlit as st
 import pandas as pd
 import numpy as np
