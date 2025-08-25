@@ -383,41 +383,6 @@ def get_personality_recommendations(personality_scores, big5music):
         st.error(f"Error getting recommendations: {e}")
         return [], None
 
-def main():
-    # Load data
-    with st.spinner("Loading MusiPy..."):
-        estimator, song_names, song_cosines, big5music = load_data()
-    
-    if estimator is None:
-        st.error("Failed to load application data. Please check your data files.")
-        return
-    
-    # Header
-    st.markdown('<h1 class="main-header">🎵 MusiPy</h1>', unsafe_allow_html=True)
-    st.markdown("### Personality-Based Music Recommendation System")
-    
-    # Sidebar for navigation
-    st.sidebar.title("Navigation")
-    page = st.sidebar.radio("Choose a page:", ["Personality Test", "Music Recommendations", "About"])
-    
-    if page == "Personality Test":
-        # Choose test method
-        test_method = st.radio(
-            "Choose how to get your personality scores:",
-            ["🧠 Take the Big Five Test (Recommended)", "📊 Enter Scores Manually", "🔗 Use External Test"]
-        )
-        
-        if test_method == "🧠 Take the Big Five Test (Recommended)":
-            show_big_five_test()
-        elif test_method == "📊 Enter Scores Manually":
-            show_personality_test()
-        elif test_method == "🔗 Use External Test":
-            show_external_test()
-    elif page == "Music Recommendations":
-        show_recommendations(estimator, song_names, song_cosines, big5music)
-    elif page == "About":
-        show_about()
-
 def show_personality_test():
     """Display personality test interface"""
     st.markdown('<div class="personality-section">', unsafe_allow_html=True)
@@ -535,10 +500,10 @@ def show_about():
     
     ### 🛠️ Technical Details
     
-    - **Backend**: Python, Flask/Streamlit
+    - **Backend**: Python, Streamlit
     - **Machine Learning**: Scikit-learn, kNN algorithm
     - **Data Processing**: Pandas, NumPy, SciPy
-    - **Deployment**: Docker, production-ready
+    - **Deployment**: Streamlit Cloud ready
     
     ### 📊 Big Five Personality Traits
     
@@ -554,6 +519,71 @@ def show_about():
     personality dimensions and music preferences. It's not just another recommendation 
     engine - it's scientifically grounded!
     """)
+
+def main():
+    """Main application function"""
+    try:
+        # Load data
+        with st.spinner("Loading MusiPy..."):
+            estimator, song_names, song_cosines, big5music = load_data()
+        
+        if estimator is None:
+            st.error("""
+            ❌ **Failed to load application data.** 
+            
+            This might be due to:
+            - Missing data files
+            - File path issues
+            - Model loading problems
+            
+            Please check that all required files are present in the repository.
+            """)
+            return
+        
+        # Header
+        st.markdown('<h1 class="main-header">🎵 MusiPy</h1>', unsafe_allow_html=True)
+        st.markdown("### Personality-Based Music Recommendation System")
+        
+        # Sidebar for navigation
+        st.sidebar.title("Navigation")
+        page = st.sidebar.radio("Choose a page:", ["Personality Test", "Music Recommendations", "About"])
+        
+        if page == "Personality Test":
+            # Choose test method
+            test_method = st.radio(
+                "Choose how to get your personality scores:",
+                ["🧠 Take the Big Five Test (Recommended)", "📊 Enter Scores Manually", "🔗 Use External Test"]
+            )
+            
+            if test_method == "🧠 Take the Big Five Test (Recommended)":
+                show_big_five_test()
+            elif test_method == "📊 Enter Scores Manually":
+                show_personality_test()
+            elif test_method == "🔗 Use External Test":
+                show_external_test()
+        elif page == "Music Recommendations":
+            show_recommendations(estimator, song_names, song_cosines, big5music)
+        elif page == "About":
+            show_about()
+            
+    except Exception as e:
+        st.error(f"""
+        ❌ **An error occurred while running the application:**
+        
+        **Error:** {str(e)}
+        
+        **Troubleshooting:**
+        1. Check that all data files are present
+        2. Verify the model file exists
+        3. Ensure all dependencies are installed
+        
+        **Files needed:**
+        - `models/knn.pkl`
+        - `data/songs_names.csv`
+        - `data/song_cosines.csv`
+        - `data/final.csv`
+        """)
+        st.exception(e)
 
 if __name__ == "__main__":
     main()
