@@ -10,7 +10,9 @@ from .initialize import app, estimator, song_names, song_cosines
 main = Blueprint('main', __name__)
 
 # ig5music = pd.read_pickle('/Users/jenniferwang/musipy_by_jennwang/models/knn.pkl')
-big5music = pd.read_csv('/Users/jenniferwang/musipy_by_jennwang/data/final.csv')
+import os
+BASE_DIR = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
+big5music = pd.read_csv(os.path.join(BASE_DIR, 'data', 'final.csv'))
 
 class PredictForm(FlaskForm):
     """Fields for Predict"""
