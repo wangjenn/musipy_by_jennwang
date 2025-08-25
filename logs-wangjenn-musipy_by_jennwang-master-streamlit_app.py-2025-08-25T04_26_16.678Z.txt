@@ -1,0 +1,89 @@
+
+[     UTC     ] Logs for wangjenn-musipy-by-jennwang-streamlit-app-sxxoko.streamlit.app/
+────────────────────────────────────────────────────────────────────────────────────────
+[04:21:37] 🖥 Provisioning machine...
+[04:21:37] 🎛 Preparing system...
+[04:21:37] ⛓ Spinning up manager process...
+[04:21:40] 🚀 Starting up repository: 'musipy_by_jennwang', branch: 'master', main module: 'streamlit_app.py'
+[04:21:40] 🐙 Cloning repository...
+[04:21:46] 🐙 Cloning into '/mount/src/musipy_by_jennwang'...
+Warning: Permanently added the ED25519 host key for IP address '140.82.116.4' to the list of known hosts.
+
+[04:21:46] 🐙 Cloned repository!
+[04:21:46] 🐙 Pulling code changes from Github...
+[04:21:47] 📦 Processing dependencies...
+/home/adminuser/.conda/lib/python3.13/argparse.py:1258: FutureWarning: `remote_definition` is deprecated and will be removed in 25.9. Use `conda env create --file=URL` instead.
+  subnamespace, arg_strings = subparser.parse_known_args(arg_strings, None)
+Retrieving notices: [2025-08-25 04:21:49.941101] - [2025-08-25 04:21:50.036940] \ [2025-08-25 04:21:50.137828] | [2025-08-25 04:21:50.241348] / [2025-08-25 04:21:50.342112] - [2025-08-25 04:21:50.442243] done
+Channels:
+ - defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): [2025-08-25 04:21:50.537694] | [2025-08-25 04:21:50.639736] / [2025-08-25 04:21:50.741016] - [2025-08-25 04:21:50.841306] \ [2025-08-25 04:21:50.941373] | [2025-08-25 04:21:51.041618] / [2025-08-25 04:21:51.146525] - [2025-08-25 04:21:51.298463] \ [2025-08-25 04:21:51.974707] | [2025-08-25 04:21:52.132996] / [2025-08-25 04:21:52.306815] - [2025-08-25 04:21:52.409547] done
+Solving environment: [2025-08-25 04:21:52.410774] | [2025-08-25 04:21:52.530351] / [2025-08-25 04:21:52.696033] - [2025-08-25 04:21:52.798839] failed
+
+PackagesNotFoundError: The following packages are not available from current channels:
+
+  - click==6.6=py35_0
+
+Current channels:
+
+  - https://repo.anaconda.com/pkgs/main
+  - https://repo.anaconda.com/pkgs/r
+
+To search for alternate channels that may provide the conda package you're
+looking for, navigate to
+
+    https://anaconda.org
+
+and use the search bar at the top of the page.
+
+
+[04:21:53] 🐍 Python dependencies were installed from /mount/src/musipy_by_jennwang/environment.yml using conda.
+[04:21:53] 📦 WARN: More than one requirements file detected in the repository. Available options: conda /mount/src/musipy_by_jennwang/environment.yml, uv /mount/src/musipy_by_jennwang/requirements.txt. Used: conda with /mount/src/musipy_by_jennwang/environment.yml
+Check if streamlit is installed
+
+──────────────────────────────── Installing Streamlit ──────────────────────────────────
+
+Using uv pip install.
+Using Python 3.13.5 environment at /home/adminuser/.conda
+Resolved 37 packages in 474ms
+Prepared 30 packages in 2.45s
+Installed 30 packages in 95ms
+ + altair==5.5.0
+ + attrs==25.3.0
+ + blinker==1.9.0
+ +[2025-08-25 04:21:58.271180]  cachetools==6.1.0
+ + click==8.2.1
+ + gitdb==4.0.12
+ + gitpython==3.1.45
+ + jinja2==3.1.6
+ + jsonschema[2025-08-25 04:21:58.271495] ==4.25.1
+ + jsonschema-specifications==2025.4.1
+ + markupsafe==3.0.2
+ + narwhals==2.1.2
+ + numpy==2.3.2
+ + pandas==2.3.2
+ + pillow==11.3.0
+ + protobuf==6.32.0
+ + pyarrow==21.0.0
+ + pydeck==0.9.1
+ + python-dateutil[2025-08-25 04:21:58.272206] ==2.9.0.post0
+ + pytz==2025.2
+ + referencing==0.36.2
+ + rpds-py==0.27.0
+ + six==1.17.0
+ + smmap==5.0.2
+ + streamlit==1.48.1
+ + tenacity==9.1.2
+ + [2025-08-25 04:21:58.272475] toml==0.10.2
+ + tornado==6.5.2
+ + tzdata==2025.2
+ + watchdog==6.0.0
+
+────────────────────────────────────────────────────────────────────────────────────────
+
+[04:21:58] 📦 Processed dependencies!
+
+
+
+[04:22:02] ❗️ The service has encountered an error while checking the health of the Streamlit app: Get "http://localhost:8501/healthz": dial tcp 127.0.0.1:8501: connect: connection refused
