@@ -8,14 +8,9 @@
 - This simple project was inspired by empirical research demonstrating the links between personality dimensions and music preferences, I created this app based on _collaborative filtering_ + _content-based filtering_ using **kNN** and **cosine similarities**. Specifically, this app recommends different types of music to users based on their: 
   1) Unique personality dimensions (as validated by the psychometrically valid **Big Five Inventory**) and
   2) Real-time in-app user interactions and behaviors (e.g., 👍🏻 or 👎🏻 to a sample song snippet).
- 
-----------------------------------------------------------------------------------------------------------------
-## **SOME UPDATES AND CAVEATS**
-
-- This project was built a **LONG, LONG, LONG time** ago (circa ~2017) in a matter of 2-3 weeks as a beginner project for me. So, YES, I am well aware of the many errors and outdated techniques inherent in this project. Nevertheless, I wanted to share this project here in hopes of inspiring others to think about how they might try to start their very own machine learning projects even if they may not have the traditional software engineering background or training (yet) 🤓.
 
 ----------------------------------------------------------------------------------------
-# **Some Common FAQs** ❓
+# **Common FAQs** ❓
 ### - *Why did you use kNN?*
 
   Because it is the most commonly used algorithm (the standard algorithm, if you will) for recommendation systems (as of 7 years ago when I first started this project). Also, I didn't have a lot of features in this particular dataset, so I was hoping that the potential problems of overfitting for kNN would be minimal. 
@@ -49,9 +44,3 @@
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## Resources: 
 - Big Five Inventory (BFI): https://openpsychometrics.org/tests/IPIP-BFFM/
-
-
-----------------------------------------------------------------------------------------------------------------
-💕 Feel free to contact me (linkedin.com/jennifermwangphd) if you have any questions! 👍🏻. I genuinely LOVE talking to and learning from people (nerds especially welcome 🤓), but please try to remain civil and professional if possible. I welcome constructive feedback, but I don't usually find harsh criticisms or attacks on my logic or the technical exeuction or the beauty of my code very useful (yes, this has happened before!). Again, I did this project a VERY, VERY LONG time ago, and while I try to update packages and dependencies sporadically, I currently don't have the time nor desire to revisit this project in depth /optimize code to perfection. 
-
-Thank you for understanding! 🙏🏻. 
