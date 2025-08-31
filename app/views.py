@@ -68,17 +68,29 @@ def index():
 @main.route('/recommend/')
 def recommender():
     """Collaborative Filtering page"""
+
     selected_songs = request.args.get('selected_songs')
     all_songs = request.args.get('all_songs')
     scores = request.args.get('scores')
+
+    print(f"[DEBUG] selected_songs: {selected_songs}")
+    print(f"[DEBUG] all_songs: {all_songs}")
+    print(f"[DEBUG] scores: {scores}")
 
     if selected_songs and all_songs and scores:
         selected_songs = selected_songs.strip(';').split(';')
         all_songs = all_songs.strip(';').split(';')
         scores = scores.strip(';').split(';')
 
+        print(f"[DEBUG] Parsed selected_songs: {selected_songs}")
+        print(f"[DEBUG] Parsed all_songs: {all_songs}")
+        print(f"[DEBUG] Parsed scores: {scores}")
+
         try:
+            print(f"[DEBUG] song_cosines columns: {list(song_cosines.columns)}")
+            print(f"[DEBUG] song_cosines index: {list(song_cosines.index)}")
             a1 = song_cosines[selected_songs]
+            print(f"[DEBUG] a1 shape: {a1.shape}")
 
             recs_index = []
             recs_title = []
@@ -88,16 +100,23 @@ def recommender():
             for i in a1.columns:
                 sorted_a1 = sorted(enumerate(a1[i]), key=lambda x: x[1], reverse=True)
                 song_rec_index = [tup[0] for tup in sorted_a1[1:6]]
+                print(f"[DEBUG] sorted_a1 for column {i}: {sorted_a1}")
+                print(f"[DEBUG] song_rec_index for column {i}: {song_rec_index}")
                 recs_index.extend(song_rec_index)
                 recs_title.append(song_names.Title.values[recs_index])
                 recs_artist.append(song_names.Artist.values[recs_index])
                 recs_genre.append(song_names.Genre.values[recs_index])
 
+            print(f"[DEBUG] recs_index: {recs_index}")
+            print(f"[DEBUG] recs_title: {recs_title}")
+            print(f"[DEBUG] recs_artist: {recs_artist}")
+            print(f"[DEBUG] recs_genre: {recs_genre}")
+
             newone = list(zip(recs_title[1], recs_artist[1], recs_genre[1]))
-            print(newone)
+            print(f"[DEBUG] newone: {newone}")
 
             return render_template("recommend.html", song_returns=all_songs, newone=newone, scores=scores)
         except Exception as e:
-            print(f"Error in recommender: {e}")
+            print(f"[ERROR] in recommender: {e}")
 
     return render_template("recommend.html", song_returns=[], newone=[], scores=[])

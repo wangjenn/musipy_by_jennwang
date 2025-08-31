@@ -30,5 +30,5 @@ EXPOSE 9000
 HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 \
     CMD curl -f http://localhost:9000/ || exit 1
 
-# Run the application with gunicorn for production
-CMD ["gunicorn", "--bind", "0.0.0.0:9000", "--workers", "4", "--timeout", "120", "run_production:application"]
+# Run the application with gunicorn for production, capturing stdout/stderr and setting log level to debug
+CMD ["gunicorn", "--bind", "0.0.0.0:9000", "--workers", "4", "--timeout", "120", "--capture-output", "--log-level", "debug", "run_production:application"]

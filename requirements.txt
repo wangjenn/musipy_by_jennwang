@@ -3,7 +3,7 @@ streamlit>=1.28.0
 pandas>=2.0.0
 numpy>=1.26.4
 scipy>=1.13.0
-scikit-learn>=1.4.2
+scikit-learn==1.4.2
 joblib>=1.3.0
 
 # Flask dependencies (installed for Docker but ignored by Streamlit Cloud)
