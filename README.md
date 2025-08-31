@@ -34,5 +34,24 @@
   - The quick answer is that I used cosine similarity for the **personality scores** (the "content-based filtering" portion). Specifically, I used the DISTANCE between the personality scores to calculate this. I also used cosine similarity for determining song rating similarity (the "collaborative-filtering" portion, if you will).
 ---
 
+
+---
+## 🐳 Reproducibility: Run MusiPy with Docker
+
+You can easily reproduce the MusiPy environment using Docker. This ensures consistent dependencies and setup across any machine.
+
+### 1. Build the Docker image
+```sh
+docker build -t musipy .
+```
+
+### 2. Run the Docker container
+```sh
+docker run -p 9000:9000 musipy
+```
+
+This will start the MusiPy app on port 9000. Visit [http://localhost:9000](http://localhost:9000) in your browser.
+
+---
 ## 📚 Resources: 
 - Big Five Inventory (BFI): https://openpsychometrics.org/tests/IPIP-BFFM/
