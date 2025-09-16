@@ -5,7 +5,7 @@
 
 - This simple project was inspired by empirical research demonstrating the links between personality dimensions and music preferences. I created this app based on _collaborative filtering_ + _content-based filtering_ using **kNN** and **cosine similarities**. Specifically, this app recommends different types of music to users based on their:
   - Unique personality dimensions (as validated by the psychometrically valid **Big Five Inventory**) and
-  - Real-time in-app user interactions and behaviors (e.g., 👍🏻 or 👎🏻 to a sample song snippet).
+  - Real-time in-app user interactions and behaviors (e.g., 👍🏻 or 👎🏻 to a short sample song snippet). 
 
 ---
 ## 🚀 Quick Demo: 
